@@ -1,0 +1,165 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-color: #fff;
+  }
+  span{
+    -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  }
+  
+  #progress {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+  }
+  
+  #bar {
+    background-color: #fff;
+    height: 100%;
+    transition: width 0.1s ease;
+  }
+  
+  #bar.hide {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  #container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #cardBox.active{
+    display: none;
+  }
+/* 캐러셀 */
+  #cardBox{
+    position: absolute;
+    width: 40%;
+    height: 120px;
+    bottom: 5.1%;
+    left: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  .item{
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+  }
+
+  /* 메뉴바 */
+  #menuBar{
+    position: absolute;
+    width: 40%;
+    height: 39px;
+    bottom: 1%;
+    left: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px 10px 20px;
+  }
+
+  #autoCon.active{
+    display: inline-block;
+    background: url(../img/play.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  #autoCon{
+    display: inline-block;
+    background: url(../img/stop.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  #musicNF.active{
+    display: inline-block;
+    background: url(../img/on.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  #musicNF{
+    display: inline-block;
+    background: url(../img/off.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  /* 모달 창 */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    
+    /* 숨기기 */
+    z-index: -1;
+    opacity: 0;
+    }
+    
+    .show {
+    opacity: 1;
+    z-index: 1000;
+    transition: all 0.5s;
+    }
+    
+    .window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    
+    /* 임시 지정 */
+    width: 300px;
+    height: 150px;
+    
+    /* 초기에 약간 아래에 배치 */
+    transform: translate(-50%, -40%);
+    }
+    
+    .show .popup {
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    }
+    #close{
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+    }

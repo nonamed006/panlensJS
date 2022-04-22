@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- carousel-->
+	<link rel="stylesheet" href="./css/owl.carousel.css">
+	<link rel="stylesheet" href="./css/owl.theme.default.css">
+	<link rel="stylesheet" href="./css/owl.theme.green.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/owl.carousel.min.js"></script>
+    <!--음악자동재생-->
+	<script src="./js/howler.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--구글아이콘-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+ 
+
+    <title>VR Tour</title>
+</head>
+<body>
+    <div id="progress">
+        <div id="bar"></div>
+      </div>
+      <div id="container"></div>
+      <div id="addModal"></div>
+      <div id="cardBox" class="owl-carousel owl-theme">
+        <!-- 스크립트 파일에서 div 생성-->
+    </div>
+    <div id="menuBar">
+        <span id='menuBtn' class="material-icons-outlined" style="color: white; cursor: pointer;" data-toggle="tooltip" data-placement="top" title="미리보기 열기/닫기">
+            menu
+        </span>
+        <span id="autoCon" data-toggle="tooltip" data-placement="top" title="자동 회전 끄기/켜기"></span>
+        <span id="musicNF" data-toggle="tooltip" data-placement="top" title="음악 재생 끄기/켜기"></span>
+    </div>
+    <script>
+        // Carousel 
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: false,
+				margin: 10,
+				dots: false,
+				items: 5,
+				lazyLoad: true
+			})
+		});
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+
+        console.log('welcome!');
+
+        // Howler.js 
+	</script>
+
+    <script src="https://pchen66.github.io/js/three/three.min.js"></script>
+	<!-- <script src="https://pchen66.github.io/js/panolens/panolens.min.js"></script> -->
+	<script src="./js/panolens.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
